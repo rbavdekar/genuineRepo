@@ -18,9 +18,13 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: AzureKeyVault@2
+- task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    azureSubscription: 'TestSVC'
-    KeyVaultName: 'PleaseWork'
-    SecretsFilter: '*'
-    RunAsPreJob: false
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'TestSVC'
+    subscriptionId: '254ad434-e2e6-45c0-a32b-34bf24cb7479'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'rbavdekarRG'
+    location: 'East US 2'
+    templateLocation: 'Linked artifact'
+    deploymentMode: 'Incremental'
