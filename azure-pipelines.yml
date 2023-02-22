@@ -65,7 +65,3 @@ steps:
         Write-Host "Exception!`n"
         Write-Host $Error[0]
       }
-
-      Write-Host "##vso[task.logissue type=error]$v2"
-  env: 
-    system_accesstoken: $(System.AccessToken)
