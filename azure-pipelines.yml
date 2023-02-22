@@ -41,7 +41,7 @@ steps:
       Write-Host $tokObjExp.ToString("dd/MM/yyyy")
 
       Write-Host "------------------ IDENTITY INFO  -------------------------"
-      $apiURL = "https://dev.azure.com/safetitestvso/_apis/connectionData" -f $orgName
+      $apiURL = "https://dev.azure.com/rbavdekar/_apis/connectionData" -f $orgName
       $headers =@{
         Authorization = "Bearer $token";
         "Content-Type"="application/json"
